@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <title>Masuk</title>
+</head>
+
+<body>
+    <div>
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Siyu Store</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Belanja
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Kebutuhan Anak</a></li>
+                                <li><a class="dropdown-item" href="#">Kebutuhan Pakaian</a></li>
+                                <li><a class="dropdown-item" href="#">Kebutuhan Rumah</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://wa.me/+6282116924750" target="_blank">Customer
+                                Services</a>
+                        </li>
+                        <li>
+                            <img src="bendera indonesia.png" class="navbar-nav me-auto mb-2 mb-lg-0 mt-3 ms-3"
+                                style="height: 20px; height: 11px;" alt="...">
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Bahasa Indonesia</a>
+                        </li>
+                    </ul>
+                    <div>
+                        <ul class="navbar-nav me-0 mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="buat akun.html">Buat Akun</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="navbar-nav me-4 mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="masuk.html">Masuk</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- NAVBAR END -->
+    </div>
+
+    <!-- CONTENT START -->
+    <div class="container mt-5">
+        <div id="carouselExampleSlidesOnly" class="carousel slide row" data-bs-ride="carousel">
+            <div class="col-4 m-3 carousel-inner border border-dark rounded-end-4" style="width: 30%; height: 30%;">
+                <div class="carousel-item active">
+                    <img src="kaos polo.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="kaos polo.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="kaos polo.png" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <div class="col-4 mt-2">
+                <h1 class="fs-3">Kaos Polo</h1>
+                <p>Kaos polo pria mewah elegan, anti jebol dan memiliki kualitas
+                    internasional diatas rata-rata.</p>
+                <h1>Rp250.900</h1>
+                <div class="row">
+                    <p class="col-md-2 bg-dark text-danger">28,5%</p>
+                    <del class=" col-md-1 text-secondary">Rp350.900</del>
+                    <h5 class="border-top pt-3 mt-2 mb-3">Pilih Warna</h5>
+                    <div>
+                        <button id="myButton" type="button" class="btn btn-light m-1 container border-dark"
+                            style="font-size: 14px;">Merah Merona</button>
+                        <button id="myButton" type="button" class="btn btn-light m-1 container border-dark"
+                            style="font-size: 14px;">Kuning Silau</button>
+                        <button id="myButton" type="button" class="btn btn-light m-1 container border-dark"
+                            style="font-size: 14px;">Hijau Sejuk</button>
+
+                        <style>
+                            #myButton {
+                                border-radius: 5px;
+                                cursor: pointer;
+                                transition: background-color 0.3s;
+                                /* Transisi halus */
+                            }
+
+
+                            #myButton.clicked {
+                                background-color: rgb(51, 51, 51);
+                                /* Warna setelah diklik */
+                                color: #d4d9e2;
+                            }
+
+                        </style>
+                        <script>const buttons = document.querySelectorAll('#myButton');
+
+                            buttons.forEach(button => {
+                                button.addEventListener('click', function () {
+                                    // Hapus kelas 'clicked' dari semua tombol
+                                    buttons.forEach(btn => btn.classList.remove('clicked'));
+
+                                    // Tambahkan kelas 'clicked' pada tombol yang diklik
+                                    this.classList.add('clicked');
+                                });
+                            });
+                            </script>
+                    </div>
+                </div>
+            </div>
+            <div class="card col-4 m-3" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Kaos Polo</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary border-bottom pb-3">Merah</h6>
+                    <!-- STOK -->
+                    <style>
+                        .quantity-box {
+                            width: 96px;
+                            height: 40px;
+                            border: 1px solid #d1d5db;
+                            /* gray-300 */
+                            border-radius: 0.5rem;
+                            /* rounded-lg */
+                            display: flex;
+                            align-items: center;
+                            user-select: none;
+                        }
+
+                        .quantity-btn {
+                            flex: 1;
+                            text-align: center;
+                            font-size: 1.125rem;
+                            /* text-lg */
+                            font-weight: 300;
+                            /* font-light */
+                            cursor: pointer;
+                            color: #9ca3af;
+                            /* gray-400 */
+                            user-select: none;
+                            border: none;
+                            background: transparent;
+                            line-height: 1;
+                        }
+
+                        .quantity-btn.increase {
+                            color: #22c55e;
+                            /* green-500 */
+                        }
+
+                        .quantity-value {
+                            flex: 1;
+                            text-align: center;
+                            font-size: 1.125rem;
+                            /* text-lg */
+                            font-weight: 400;
+                            /* font-normal */
+                            color: #374151;
+                            /* gray-700 */
+                            user-select: none;
+                            line-height: 1;
+                        }
+                    </style>
+                    </head>
+                    <div class="justify-content-center align-items-center mt-3 mb-3 bg-white">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="quantity-box">
+                                <button id="decreaseBtn" class="quantity-btn">−</button>
+                                <div id="quantity" class="quantity-value">1</div>
+                                <button id="increaseBtn" class="quantity-btn increase">+</button>
+                            </div>
+                            <div class="fs-6 text-dark">
+                                Stok: <span id="stock" class="fw-bold">38</span>
+                            </div>
+                            <div class="">
+                                <del class="fs-6 text-secondary" id="originalPrice">Rp350.900</del>
+                                <h6><span id="subtotal">Rp250.900</span></h6>
+                            </div>
+                        </div>
+
+                        <script>
+                            const increaseBtn = document.getElementById('increaseBtn');
+                            const decreaseBtn = document.getElementById('decreaseBtn');
+                            const quantityEl = document.getElementById('quantity');
+                            const stockEl = document.getElementById('stock');
+                            const subtotalEl = document.getElementById('subtotal');
+
+                            const originalPrice = 350900;
+                            const discountedPrice = 250900;
+
+
+                            let stock = 38;
+                            let quantity = 1;
+
+                            function formatRupiah(number) {
+                                // Format number to Indonesian Rupiah format with dot as thousand separator
+                                return 'Rp' + number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+                            }
+
+                            function updateSubtotal() {
+                                // Calculate subtotal based on quantity and discounted price per item
+                                const pricePerItem = discountedPrice / 1; // discountedPrice is for 1 item
+                                const subtotal = pricePerItem * quantity;
+                                subtotalEl.textContent = formatRupiah(subtotal);
+                            }
+
+                            function addStock() {
+                                const currentStock = parseInt(document.getElementById('currentStock').value) || 0;
+                                const addStock = parseInt(document.getElementById('addStock').value) || 0;
+                                const totalStock = currentStock + addStock;
+                                document.getElementById('totalStock').innerText = totalStock;
+                            }
+
+                            function updateDisplay() {
+                                quantityEl.textContent = quantity;
+                                stockEl.textContent = stock - quantity;
+                            }
+
+                            increaseBtn.addEventListener('click', () => {
+                                if (quantity < stock) {
+                                    quantity++;
+                                    quantityEl.textContent = quantity;
+                                    updateSubtotal();
+                                }
+                            });
+
+                            decreaseBtn.addEventListener('click', () => {
+                                if (quantity > 1) {
+                                    quantity--;
+                                    quantityEl.textContent = quantity;
+                                    updateSubtotal();
+                                }
+                            });
+                        </script>
+                    </div>
+
+                    <!-- STOK END -->
+                    <div>
+                        <button type="button" class="btn btn-dark m-1 container">+ Keranjang
+                            <a href="#" class="card-link"></a>
+                        </button>
+                        <button type="button" class="btn btn-light m-1 container border-dark">Beli
+                            <a href="#" class="card-link"></a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+        </div>
+    </div>
+    <!-- CONTENT END -->
+
+    <!-- BOOTSTRAP JAVA -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
